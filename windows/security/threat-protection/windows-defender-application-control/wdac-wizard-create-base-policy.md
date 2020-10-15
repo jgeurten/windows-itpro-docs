@@ -42,6 +42,7 @@ Each of the template policies has a unique set of policy allowlist rules which w
 
 
 ![Selecting a base template for the policy](images/wdac-wizard-template-selection.png)
+
 Once the base template is selected, give the policy a name and choose where to save the application control policy on disk.
 
 ## Configuring Policy Rules
