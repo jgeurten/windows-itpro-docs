@@ -115,7 +115,7 @@ The Wizard supports the creation of [file name rules](select-types-of-rules-to-c
 | **Product name** | Specifies the name of the product with which the binary ships. |
 | **Internal name** | Specifies the internal name of the binary. |
 
-![Custom file attributes rule](images/wdac-wizard-custom-file-attribute-rule.png=550x)
+![Custom file attributes rule](images/wdac-wizard-custom-file-attribute-rule.png){width=200}
 
 **File Hash**
 
@@ -128,4 +128,4 @@ The policy signing rules list table on the left of the page will document the al
 
 ## Up next
 
-- [Create a supplemental WDAC policy using the Wizard](wdac-wizard-create-supplemental-policy.md)
+- [Editing a WDAC policy using the Wizard](wdac-wizard-editing-policy.md)
