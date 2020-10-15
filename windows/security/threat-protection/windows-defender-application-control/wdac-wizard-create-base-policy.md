@@ -38,7 +38,8 @@ Each of the template policies has a unique set of policy allowlist rules which w
 | **Allow Microsoft Mode**      | | Default Windows mode will authorize the following components: </br><ul><li>Windows operating components - any binary installed by a fresh install of Windows<li><li>Apps installed from the Microsoft Store</li><li>Microsoft Office365 apps, OneDrive and Microsoft Teams</li><li>Third party [Windows Hardware Compatible drivers](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/whql-release-signature)</li><li>*All Microsoft-signed software*</li></ul>|
 | **Signed and Reputable Mode** | | Default Windows mode will authorize the following components: </br><ul><li>Windows operating components - any binary installed by a fresh install of Windows<li><li>Apps installed from the Microsoft Store</li><li>Microsoft Office365 apps, OneDrive and Microsoft Teams</li><li>Third party [Windows Hardware Compatible drivers](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/whql-release-signature)</li><li>All Microsoft-signed software</li><li>*Files with good reputation per [Microsoft Defender's Intelligent Security Graph techology](use-windows-defender-application-control-with-intelligent-security-graph)*</li></ul>|
 
-Italized content denotes the changes in the current policy with respect to the policy prior. 
+*Italized content denotes the changes in the current policy with respect to the policy prior.*
+
 
 ![Selecting a base template for the policy](images/wdac-wizard-template-selection.png)
 Once the base template is selected, give the policy a name and choose where to save the application control policy on disk.
@@ -77,6 +78,7 @@ Selecting the **+ Advanced Options** label will show another column of policy ru
 | **Invalidate EAs on Reboot** | When the Intelligent Security Graph option (14) is used, WDAC sets an extended file attribute that indicates that the file was authorized to run. This option will cause WDAC to periodically re-validate the reputation for files that were authorized by the ISG.| 
 | **Require EV Signers** | In addition to being WHQL signed, this rule requires that drivers must have been submitted by a partner that has an Extended Verification (EV) certificate. All Windows 10 and later drivers will meet this requirement. |
 
+
 ![Rule options UI for Windows Allowed mode](images/wdac-wizard-rule-options-UI.png)
 
 
@@ -98,6 +100,7 @@ The Publisher file rule type uses properties in the code signing certificate cha
 | **File version** | SignedVersion | This rule is a combination of PCACertificate, Publisher and a version number. Anything from the specified publisher with a version at or above the one specified is affected. |
 | **File name** | FilePublisher | Most specific. Combination of the file name, publisher and PCA certificate as well as a minimum version number. Files from the publisher with the specified name and greater or equal to the specified version are affected. |
 
+
 ![Custom filepublisher file rule creation](images/wdac-wizard-custom-publisher-rule.png)
 
 **Path**
@@ -115,6 +118,7 @@ The Wizard supports the creation of [file name rules](select-types-of-rules-to-c
 | **Product name** | Specifies the name of the product with which the binary ships. |
 | **Internal name** | Specifies the internal name of the binary. |
 
+
 ![Custom file attributes rule](images/wdac-wizard-custom-file-attribute-rule.png)
 
 **File Hash**
@@ -128,4 +132,4 @@ The policy signing rules list table on the left of the page will document the al
 
 ## Up next
 
-- [Create a supplemental WDAC policy using the Wizard](wdac-wizard-create-supplemental-policy.md)
+- [Editing a WDAC policy using the Wizard](wdac-wizard-editing-policy.md)
