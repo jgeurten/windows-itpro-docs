@@ -112,8 +112,7 @@ Microsoft recommends that you block the following Microsoft-signed applications 
 
 Pick the correct version of each .dll for the Windows release you plan to support, and remove the other versions. Ensure that you also uncomment them in the signing scenarios section.
 
-```xml
-<?xml version="1.0" encoding="utf-8" ?> 
+```xml<?xml version="1.0" encoding="utf-8" ?> 
   <SiPolicy xmlns="urn:schemas-microsoft-com:sipolicy">
   <VersionEx>10.0.0.0</VersionEx> 
   <PolicyTypeID>{A244370E-44C9-4C06-B551-F6016E563076}</PolicyTypeID> 
@@ -158,6 +157,7 @@ Pick the correct version of each .dll for the Windows release you plan to suppor
   <Deny ID="ID_DENY_KILL" FriendlyName="kill.exe" FileName="kill.exe" MinimumFileVersion="65535.65535.65535.65535" />
   <Deny ID="ID_DENY_LXRUN" FriendlyName="lxrun.exe" FileName="lxrun.exe" MinimumFileVersion="65535.65535.65535.65535"/> 
   <Deny ID="ID_DENY_LXSS" FriendlyName="LxssManager.dll" FileName="LxssManager.dll" MinimumFileVersion="65535.65535.65535.65535"/>
+  <Deny ID="ID_DENY_MFC40" FriendlyName="mfc40.dll" FileName="mfc40.dll" MinimumFileVersion="65535.65535.65535.65535"/> 
   <Deny ID="ID_DENY_MS_BUILD" FriendlyName="Microsoft.Build.dll" FileName="Microsoft.Build.dll" MinimumFileVersion="65535.65535.65535.65535" /> 
   <Deny ID="ID_DENY_MS_BUILD_FMWK" FriendlyName="Microsoft.Build.Framework.dll" FileName="Microsoft.Build.Framework.dll" MinimumFileVersion="65535.65535.65535.65535" /> 
   <Deny ID="ID_DENY_MWFC" FriendlyName="Microsoft.Workflow.Compiler.exe" FileName="Microsoft.Workflow.Compiler.exe" MinimumFileVersion="65535.65535.65535.65535" /> 
@@ -896,6 +896,7 @@ Pick the correct version of each .dll for the Windows release you plan to suppor
   <FileRuleRef RuleID="ID_DENY_KILL"/>
   <FileRuleRef RuleID="ID_DENY_LXSS"/> 
   <FileRuleRef RuleID="ID_DENY_LXRUN"/> 
+  <FileRuleRef RuleID="ID_DENY_MFC40"/>
   <FileRuleRef RuleID="ID_DENY_MS_BUILD" /> 
   <FileRuleRef RuleID="ID_DENY_MS_BUILD_FMWK" /> 
   <FileRuleRef RuleID="ID_DENY_MWFC" /> 
