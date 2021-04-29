@@ -38,7 +38,7 @@
               href: deploy-multiple-windows-defender-application-control-policies.md
         - name: Create your WDAC policy
           items: 
-            - name: Example WDAC base policies
+            - name: Example WDAC xml base policies
               href: example-wdac-base-policies.md
             - name: Policy creation for common WDAC usage scenarios
               href: types-of-devices.md
